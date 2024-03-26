@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+//The service definition for solving the quadratic equation
+service Quadratic_Solution {
+    rpc Solve_Quadratic_Equation(Quadratic_Request) returns (Quadratic_Response);
+}
+//define the mesage for sending the coefficients
+message Quadratic_Request {
+    double a = 1;
+    double b = 2;
+    double c = 3;
+}
+//defines the mesage for receiving the solution
+message Quadratic_Response {
+    string solution = 1;
+}
