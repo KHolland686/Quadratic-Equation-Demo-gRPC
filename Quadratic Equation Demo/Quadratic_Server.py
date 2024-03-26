@@ -16,8 +16,7 @@ class quadratic_Equation_Solver(quadraticEquation_pb2_grpc.Quadratic_SolutionSer
         root = b**2 - 4 * a * c
         # If the discriminant/root is negative, return response stating solutions are imaginary
         if root < 0:
-            return quadraticEquation_pb2.QuadraticResponse(
-                solution = "The dicriminant is negative, so the solutions are complex or imaginary"
+            return quadraticEquation_pb2.Quadratic_Response(solution = "The dicriminant is negative, so the solutions are complex or imaginary"
             )
         else:
             # Otherwise, solve for x1 and x2 
